@@ -46,9 +46,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+  
       - name: Build and Push Image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ci-cd-practical:latest
+          tags: jaswinderkaur04/ci-cd-practical:latest
+
